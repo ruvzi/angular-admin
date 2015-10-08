@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 100
+  username: mysvadba
+  password: pass
+  host: localhost
+
+development:
+  <<: *default
+  database: angular_admin_development
+
+test:
+  <<: *default
+  database: angular_admin_test
